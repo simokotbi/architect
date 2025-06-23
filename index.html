@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>ARCHDesign Architects | Contemporary Architectural Design Studio | Los Angeles</title>
+    <meta name="description" content="Award-winning contemporary architectural firm in Los Angeles specializing in residential, commercial, and institutional design. Creating innovative spaces that transcend the ordinary.">
+    <meta name="keywords" content="architect Los Angeles, contemporary architecture, residential design, commercial architecture, architectural firm, modern buildings, sustainable design, interior architecture, urban planning">
+    <meta name="author" content="ARCHDesign Architects">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.archdesignarchitects.com">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.archdesignarchitects.com">
+    <meta property="og:title" content="ARCHDesign Architects | Contemporary Architectural Design Studio">
+    <meta property="og:description" content="Award-winning contemporary architectural firm specializing in innovative residential, commercial, and institutional design in Los Angeles.">
+    <meta property="og:image" content="https://www.archdesignarchitects.com/images/og-image.jpg">
+    <meta property="og:site_name" content="ARCHDesign Architects">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.archdesignarchitects.com">
+    <meta property="twitter:title" content="ARCHDesign Architects | Contemporary Architectural Design Studio">
+    <meta property="twitter:description" content="Award-winning contemporary architectural firm specializing in innovative residential, commercial, and institutional design.">
+    <meta property="twitter:image" content="https://www.archdesignarchitects.com/images/twitter-image.jpg">
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ArchitecturalService",
+        "name": "ARCHDesign Architects",
+        "description": "Contemporary architectural design studio specializing in residential, commercial, and institutional projects",
+        "url": "https://www.archdesignarchitects.com",
+        "logo": "https://www.archdesignarchitects.com/images/logo.png",
+        "image": "https://www.archdesignarchitects.com/images/hero-image.jpg",
+        "telephone": "+1-310-555-0123",
+        "email": "hello@archdesignarchitects.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "1420 Beverly Hills",
+            "addressLocality": "Los Angeles",
+            "addressRegion": "CA",
+            "postalCode": "90210",
+            "addressCountry": "US"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "34.0736",
+            "longitude": "-118.4004"
+        },
+        "openingHours": "Mo-Fr 09:00-18:00",
+        "sameAs": [
+            "https://www.instagram.com/archdesignarchitects",
+            "https://www.linkedin.com/company/archdesign-architects"
+        ],
+        "priceRange": "$$$",
+        "serviceArea": {
+            "@type": "GeoCircle",
+            "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": "34.0522",
+                "longitude": "-118.2437"
+            },
+            "geoRadius": "50000"
+        }
+    }
+    </script>
+    
+    <!-- Additional Structured Data for Team -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "ARCHDesign Architects",
+        "employee": [
+            {
+                "@type": "Person",
+                "name": "David Chen",
+                "jobTitle": "Principal Architect",
+                "worksFor": {
+                    "@type": "Organization",
+                    "name": "ARCHDesign Architects"
+                }
+            },
+            {
+                "@type": "Person",
+                "name": "Carlos Rodriguez",
+                "jobTitle": "Senior Architect",
+                "worksFor": {
+                    "@type": "Organization",
+                    "name": "ARCHDesign Architects"
+                }
+            },
+            {
+                "@type": "Person",
+                "name": "Michael Thompson",
+                "jobTitle": "Design Director",
+                "worksFor": {
+                    "@type": "Organization",
+                    "name": "ARCHDesign Architects"
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <!-- Favicon and Icons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="dns-prefetch" href="//images.unsplash.com">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Lora:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div class="loader" id="loader">
+        <div class="loader-line"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav-overlay" id="navOverlay">
+        <div class="nav-content">
+            <button class="nav-close" id="navClose">&times;</button>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#about" class="nav-link">Philosophy</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#team" class="nav-link">Team</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <h1 class="logo-text">ARCHDesign</h1>
+        </div>
+        <button class="nav-toggle" id="navToggle">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+    </header>
+
+    <!-- Breadcrumb Navigation for SEO -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="/">
+                    <span itemprop="name">Home</span>
+                </a>
+                <meta itemprop="position" content="1" />
+            </li>
+        </ol>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-media">
+            <div class="hero-image" style="background-image: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2053&q=80')"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">ARCHDesign ARCHITECTS</h1>
+                <p class="hero-tagline">Crafting spaces that transcend the ordinary</p>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span class="scroll-text">Scroll</span>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <header class="section-header">
+                <h2 class="section-title">Selected Works</h2>
+                <p class="section-subtitle">A curated collection of our most significant architectural endeavors</p>
+            </header>
+            
+            <div class="portfolio-grid">
+                <article class="project-card project-card--large">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Zenith Residence - Modern luxury home in Malibu featuring floor-to-ceiling windows and sustainable design">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Zenith Residence</h3>
+                        <p class="project-type">Private Residential</p>
+                        <p class="project-location">Malibu, California</p>
+                        <p class="project-description">A stunning 5,000 sq ft contemporary home featuring sustainable materials and panoramic ocean views.</p>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Urban Sanctum - Modern commercial complex in New York with glass facade and urban integration">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Urban Sanctum</h3>
+                        <p class="project-type">Commercial Complex</p>
+                        <p class="project-location">New York, NY</p>
+                        <p class="project-description">A 12-story mixed-use development blending retail, office, and residential spaces in Manhattan's heart.</p>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="ARCHDesign Gallery - Contemporary art gallery with minimalist design and natural lighting">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">ARCHDesign Gallery</h3>
+                        <p class="project-type">Cultural Institution</p>
+                        <p class="project-location">Los Angeles, CA</p>
+                        <p class="project-description">A 15,000 sq ft contemporary art gallery designed to showcase modern sculptures and installations.</p>
+                    </div>
+                </article>
+
+                <article class="project-card project-card--tall">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Horizon Tower - High-rise mixed-use development in Miami with modern architectural design">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Horizon Tower</h3>
+                        <p class="project-type">Mixed-Use Development</p>
+                        <p class="project-location">Miami, Florida</p>
+                        <p class="project-description">A 40-story luxury tower featuring residential units, commercial spaces, and rooftop amenities.</p>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Serenity Pavilion - Wellness center in Aspen with natural materials and mountain views">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Serenity Pavilion</h3>
+                        <p class="project-type">Wellness Center</p>
+                        <p class="project-location">Aspen, Colorado</p>
+                        <p class="project-description">A holistic wellness retreat center integrating spa facilities, meditation spaces, and fitness areas.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-background">
+            <div class="about-image" style="background-image: url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')"></div>
+        </div>
+        <div class="container">
+            <div class="about-content">
+                <header class="section-header">
+                    <h2 class="section-title">Our Philosophy</h2>
+                </header>
+                
+                <div class="about-text">
+                    <blockquote class="philosophy-quote">
+                        "Architecture is not just about creating buildings; it's about crafting experiences that elevate the human spirit and harmonize with the natural world."
+                    </blockquote>
+                    
+                    <p class="about-paragraph">
+                        At ARCHDesign Architects, we believe that exceptional architecture emerges from the intersection of bold vision and meticulous craftsmanship. Our approach is rooted in understanding the unique narrative of each project, translating abstract concepts into tangible spaces that inspire and endure.
+                    </p>
+                    
+                    <p class="about-paragraph">
+                        We embrace the challenges of contemporary design while respecting the timeless principles of proportion, light, and material authenticity. Every project is an opportunity to push boundaries, question conventions, and create environments that enhance the lives of those who inhabit them.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <header class="section-header">
+                <h2 class="section-title">Services</h2>
+                <p class="section-subtitle">Comprehensive architectural solutions tailored to your vision</p>
+            </header>
+            
+            <div class="services-grid">
+                <div class="service-item">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 21V19H5V12C5 8.13 8.13 5 12 5S19 8.13 19 12V19H21V21H3Z" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Architectural Design</h3>
+                    <p class="service-description">Complete architectural solutions from concept to completion, including residential, commercial, and institutional projects.</p>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L13.09 6.26L17 4L14.74 8.09L19 9L14.74 9.91L17 14L13.09 11.74L12 16L10.91 11.74L7 14L9.26 9.91L5 9L9.26 8.09L7 4L10.91 6.26L12 2Z" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Interior Architecture</h3>
+                    <p class="service-description">Thoughtful interior environments that seamlessly integrate with architectural vision and enhance user experience.</p>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 12H4L6 7H18L20 12H22V20H20V22H18V20H6V22H4V20H2V12Z" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Urban Planning</h3>
+                    <p class="service-description">Strategic urban design solutions that create vibrant, sustainable communities and enhance quality of life.</p>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM19 19H5V5H19V19Z" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Construction Administration</h3>
+                    <p class="service-description">Comprehensive project oversight ensuring design integrity throughout the construction process.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <div class="container">
+            <header class="section-header">
+                <h2 class="section-title">Our Team</h2>
+                <p class="section-subtitle">Visionary architects dedicated to design excellence</p>
+            </header>
+            
+            <div class="team-grid">
+                <div class="team-member" itemscope itemtype="https://schema.org/Person">
+                    <div class="member-image">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="David Chen - Principal Architect at ARCHDesign">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name" itemprop="name">David Chen</h3>
+                        <p class="member-title" itemprop="jobTitle">Principal Architect</p>
+                        <p class="member-bio" itemprop="description">With over 20 years of experience, David leads our design vision with a focus on sustainable and innovative architectural solutions.</p>
+                        <meta itemprop="worksFor" content="ARCHDesign Architects">
+                    </div>
+                </div>
+                
+                <div class="team-member" itemscope itemtype="https://schema.org/Person">
+                    <div class="member-image">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Carlos Rodriguez - Senior Architect at ARCHDesign">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name" itemprop="name">Carlos Rodriguez</h3>
+                        <p class="member-title" itemprop="jobTitle">Senior Architect</p>
+                        <p class="member-bio" itemprop="description">Carlos brings expertise in residential and commercial design, with a passion for creating spaces that connect people with their environment.</p>
+                        <meta itemprop="worksFor" content="ARCHDesign Architects">
+                    </div>
+                </div>
+                
+                <div class="team-member" itemscope itemtype="https://schema.org/Person">
+                    <div class="member-image">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Michael Thompson - Design Director at ARCHDesign">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name" itemprop="name">Michael Thompson</h3>
+                        <p class="member-title" itemprop="jobTitle">Design Director</p>
+                        <p class="member-bio" itemprop="description">Michael specializes in large-scale urban projects and mixed-use developments, bringing innovative solutions to complex design challenges.</p>
+                        <meta itemprop="worksFor" content="ARCHDesign Architects">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <header class="section-header">
+                        <h2 class="section-title">Get In Touch</h2>
+                        <p class="section-subtitle">Let's discuss your next architectural project</p>
+                    </header>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 10C21 17 12 23 12 23S3 17 3 10C3 5.03 7.03 1 12 1S21 5.03 21 10Z" stroke="currentColor" stroke-width="1.5"/>
+                                    <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.5"/>
+                                </svg>
+                            </div>
+                            <div class="contact-text">
+                                <p class="contact-label">Address</p>
+                                <p class="contact-value">1420 Beverly Hills<br>Los Angeles, CA 90210</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22 16.92V19.92C22 20.49 21.56 20.93 21 20.93C9.4 20.93 0.07 11.6 0.07 0C0.07 -0.56 0.51 -1 1.08 -1H4.08C4.65 -1 5.09 -0.56 5.09 0C5.09 2.25 5.52 4.45 6.34 6.48C6.44 6.7 6.38 6.96 6.2 7.14L4.67 8.67C6.1 11.36 8.64 13.9 11.33 15.33L12.86 13.8C13.04 13.62 13.3 13.56 13.52 13.66C15.55 14.48 17.75 14.91 20 14.91C20.56 14.91 21 15.35 21 15.92V16.92Z" stroke="currentColor" stroke-width="1.5"/>
+                                </svg>
+                            </div>
+                            <div class="contact-text">
+                                <p class="contact-label">Phone</p>
+                                <p class="contact-value">+1 (310) 555-0123</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="1.5"/>
+                                    <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="1.5"/>
+                                </svg>
+                            </div>
+                            <div class="contact-text">
+                                <p class="contact-label">Email</p>
+                                <p class="contact-value">hello@ARCHDesignarchitects.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Email Address" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Phone Number">
+                    </div>
+                    
+                    <div class="form-group">
+                        <select id="project-type" name="project-type" required>
+                            <option value="">Project Type</option>
+                            <option value="residential">Residential</option>
+                            <option value="commercial">Commercial</option>
+                            <option value="institutional">Institutional</option>
+                            <option value="urban-planning">Urban Planning</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Tell us about your project" rows="6" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">ARCHDesign ARCHITECTS</h3>
+                    <p class="footer-tagline">Crafting spaces that transcend the ordinary</p>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#portfolio" class="footer-link">Portfolio</a>
+                    <a href="#about" class="footer-link">Philosophy</a>
+                    <a href="#services" class="footer-link">Services</a>
+                    <a href="#contact" class="footer-link">Contact</a>
+                </div>
+                
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37Z" stroke="currentColor" stroke-width="1.5"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 8A6 6 0 0 1 22 14V21H18V14A2 2 0 0 0 14 14V21H10V9H14V11.5A6 6 0 0 1 16 8Z" stroke="currentColor" stroke-width="1.5"/>
+                            <rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="1.5"/>
+                            <circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2025 ARCHDesign Architects. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

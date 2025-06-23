@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# Allow crawling of important pages
+Allow: /index.html
+Allow: /sitemap.xml
+
+# Block unnecessary files from crawling
+Disallow: /styles.css
+Disallow: /script.js
+
+# Sitemap location
+Sitemap: https://www.archdesignarchitects.com/sitemap.xml
+
+# Crawl delay (optional)
+Crawl-delay: 1
