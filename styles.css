@@ -11,7 +11,7 @@
 *::before,
 *::after {
     box-sizing: border-box;
-}
+} 
 
 html {
     scroll-behavior: smooth;
@@ -422,6 +422,9 @@ p {
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
     transition: all 0.5s ease-in-out;
     cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
 .project-card--large {
@@ -563,12 +566,17 @@ p {
     border-radius: 0;
     transition: all 0.3s ease-in-out;
     border: 1px solid rgba(168, 124, 79, 0.1);
+    display: block;
+    text-decoration: none;
+    color: inherit;
 }
 
 .service-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
     border-color: #A87C4F;
+    text-decoration: none;
+    color: inherit;
 }
 
 .service-icon {
@@ -845,6 +853,524 @@ p {
 }
 
 /* ==========================================================================
+   New Page Specific Styles (Reusable Components)
+   ========================================================================== */
+
+/* Service Detail Page Styles */
+.service-detail-page {
+    padding-top: 120px; /* Account for fixed header */
+}
+
+.service-hero {
+    height: 60vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.service-overview {
+    padding: 6rem 0;
+    background-color: #F8F8F8;
+}
+
+.service-intro {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.service-benefits {
+    padding: 8rem 0;
+    background-color: #EDEDED;
+}
+
+.service-process {
+    padding: 8rem 0;
+    background-color: #F8F8F8;
+}
+
+.process-timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.process-step {
+    padding: 2rem;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(168, 124, 79, 0.1);
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+}
+
+.process-step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    border-color: #A87C4F;
+}
+
+.step-number {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #A87C4F;
+    margin-bottom: 1rem;
+}
+
+.case-studies-preview {
+    padding: 8rem 0;
+    background-color: #EDEDED;
+}
+
+.service-cta {
+    padding: 8rem 0;
+    background-color: #1A1A1A;
+    color: #F8F8F8;
+}
+
+.service-cta .section-title,
+.service-cta .section-subtitle {
+    color: #F8F8F8;
+}
+
+.cta-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.submit-btn--outline {
+    background-color: transparent;
+    color: #A87C4F;
+    border: 2px solid #A87C4F;
+}
+
+.submit-btn--outline:hover {
+    background-color: #A87C4F;
+    color: #FFFFFF;
+}
+
+.service-cta .submit-btn--outline {
+    color: #F8F8F8;
+    border-color: #F8F8F8;
+}
+
+.service-cta .submit-btn--outline:hover {
+    background-color: #F8F8F8;
+    color: #1A1A1A;
+}
+
+/* Case Study Page Styles */
+.case-study-page {
+    padding-top: 120px;
+}
+
+.case-study-hero {
+    height: 70vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.project-overview {
+    padding: 6rem 0;
+    background-color: #F8F8F8;
+}
+
+.project-intro {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.project-details {
+    padding: 4rem 0;
+    background-color: #EDEDED;
+}
+
+.project-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.client-challenge {
+    padding: 8rem 0;
+    background-color: #F8F8F8;
+}
+
+.challenge-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.challenge-stats,
+.results-stats {
+    display: grid;
+    gap: 2rem;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(168, 124, 79, 0.1);
+}
+
+.stat-number {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #A87C4F;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    color: #555555;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.our-solution {
+    padding: 8rem 0;
+    background-color: #EDEDED;
+}
+
+.solution-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.project-gallery {
+    padding: 8rem 0;
+    background-color: #F8F8F8;
+}
+
+.image-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 3rem 0;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 0;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.project-results {
+    padding: 8rem 0;
+    background-color: #EDEDED;
+}
+
+.results-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.client-testimonial {
+    padding: 8rem 0;
+    background-color: #F8F8F8;
+}
+
+.testimonial-quote-block {
+    background-color: #EDEDED;
+    padding: 3rem;
+    margin: 3rem 0;
+    border-left: 4px solid #A87C4F;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.testimonial-quote-block blockquote {
+    font-size: 1.25rem;
+    font-style: italic;
+    color: #1A1A1A;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.testimonial-author {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.author-info {
+    flex-grow: 1;
+}
+
+.author-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1A1A1A;
+    margin-bottom: 0.25rem;
+}
+
+.author-title {
+    font-size: 0.875rem;
+    color: #A87C4F;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.author-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #A87C4F;
+}
+
+.author-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.related-projects {
+    padding: 8rem 0;
+    background-color: #EDEDED;
+}
+
+.case-study-cta {
+    padding: 8rem 0;
+    background-color: #1A1A1A;
+    color: #F8F8F8;
+}
+
+.case-study-cta .section-title,
+.case-study-cta .section-subtitle {
+    color: #F8F8F8;
+}
+
+.case-study-cta .submit-btn--outline {
+    color: #F8F8F8;
+    border-color: #F8F8F8;
+}
+
+.case-study-cta .submit-btn--outline:hover {
+    background-color: #F8F8F8;
+    color: #1A1A1A;
+}
+
+/* Careers Page Styles */
+.careers-page {
+    padding-top: 120px;
+}
+
+.careers-hero {
+    height: 60vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.company-culture {
+    padding: 8rem 0;
+    background-color: #F8F8F8;
+}
+
+.office-culture {
+    padding: 6rem 0;
+    background-color: #EDEDED;
+}
+
+.open-positions {
+    padding: 8rem 0;
+    background-color: #F8F8F8;
+}
+
+.positions-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.job-card {
+    background-color: #FFFFFF;
+    border: 1px solid rgba(168, 124, 79, 0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.job-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-color: #A87C4F;
+}
+
+.job-header {
+    margin-bottom: 1.5rem;
+}
+
+.job-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1A1A1A;
+    margin-bottom: 0.75rem;
+}
+
+.job-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    color: #555555;
+}
+
+.job-department {
+    color: #A87C4F;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.job-type,
+.job-location {
+    position: relative;
+}
+
+.job-type::before,
+.job-location::before {
+    content: "•";
+    margin-right: 0.5rem;
+    color: #A87C4F;
+}
+
+.job-description {
+    margin-bottom: 1.5rem;
+}
+
+.job-requirements {
+    margin-top: 1rem;
+}
+
+.requirements-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1A1A1A;
+    margin-bottom: 0.75rem;
+}
+
+.requirements-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.requirements-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    color: #555555;
+    line-height: 1.5;
+}
+
+.requirements-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #A87C4F;
+    font-weight: 600;
+}
+
+.job-actions {
+    border-top: 1px solid rgba(168, 124, 79, 0.1);
+    padding-top: 1.5rem;
+}
+
+.apply-btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #A87C4F;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid #A87C4F;
+}
+
+.apply-btn:hover {
+    background-color: transparent;
+    color: #A87C4F;
+}
+
+.careers-application {
+    padding: 8rem 0;
+    background-color: #EDEDED;
+}
+
+.application-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.application-info {
+    margin-top: 2rem;
+}
+
+.application-form {
+    background-color: #FFFFFF;
+    padding: 3rem;
+    border: 1px solid rgba(168, 124, 79, 0.1);
+}
+
+.equal-opportunity {
+    padding: 4rem 0;
+    background-color: #F8F8F8;
+}
+
+/* ==========================================================================
    Responsive Design
    ========================================================================== */
 
@@ -878,6 +1404,28 @@ p {
     .footer-links {
         justify-content: center;
     }
+    
+    .challenge-content,
+    .results-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .application-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .cta-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .testimonial-author {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -907,6 +1455,46 @@ p {
         grid-template-columns: 1fr;
         gap: 1.5rem;
         grid-auto-rows: 300px;
+    }
+    
+    .service-hero,
+    .case-study-hero,
+    .careers-hero {
+        height: 50vh;
+    }
+    
+    .process-timeline {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .project-meta-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .image-gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .job-meta {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+    
+    .job-type::before,
+    .job-location::before {
+        display: none;
+    }
+    
+    .application-form {
+        padding: 2rem;
+    }
+    
+    .testimonial-quote-block {
+        padding: 2rem;
+        margin: 2rem 0;
     }
 }
 
@@ -946,6 +1534,23 @@ p {
     .team,
     .contact {
         padding: 4rem 0;
+    }
+    
+    .process-step,
+    .stat-item {
+        padding: 1.5rem;
+    }
+    
+    .step-number {
+        font-size: 1.5rem;
+    }
+    
+    .testimonial-quote-block blockquote {
+        font-size: 1.125rem;
+    }
+    
+    .application-form {
+        padding: 1.5rem;
     }
 }
 

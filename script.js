@@ -12,7 +12,7 @@ const contactForm = document.querySelector('.contact-form');
 // ==========================================================================
 // Loading Animation
 // ==========================================================================
-
+ 
 window.addEventListener('load', () => {
     setTimeout(() => {
         loader.classList.add('hidden');
@@ -504,3 +504,320 @@ function addLazyLoading() {
 
 // Initialize lazy loading
 addLazyLoading();
+
+// ==========================================================================
+// Enhanced Form Handling for New Pages
+// ==========================================================================
+
+// Handle application form on careers page
+const applicationForm = document.querySelector('.application-form');
+
+if (applicationForm) {
+    applicationForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = new FormData(applicationForm);
+        const data = Object.fromEntries(formData);
+        
+        // Validate application form
+        if (!validateApplicationForm(data)) {
+            return;
+        }
+        
+        // Show loading state
+        const submitBtn = applicationForm.querySelector('.submit-btn');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Submitting...';
+        submitBtn.disabled = true;
+        
+        // Simulate form submission
+        setTimeout(() => {
+            // Reset form
+            applicationForm.reset();
+            
+            // Show success message
+            showNotification('Thank you for your application. We\'ll review it and get back to you soon!', 'success');
+            
+            // Reset button
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+        }, 2000);
+    });
+}
+
+// Application form validation
+function validateApplicationForm(data) {
+    const errors = [];
+    
+    if (!data.name || data.name.trim().length < 2) {
+        errors.push('Please enter your full name.');
+    }
+    
+    if (!data.email || !isValidEmail(data.email)) {
+        errors.push('Please enter a valid email address.');
+    }
+    
+    if (!data.position) {
+        errors.push('Please select a position of interest.');
+    }
+    
+    if (!data['cover-letter'] || data['cover-letter'].trim().length < 50) {
+        errors.push('Please provide a detailed cover letter (minimum 50 characters).');
+    }
+    
+    if (errors.length > 0) {
+        showNotification(errors.join('\n'), 'error');
+        return false;
+    }
+    
+    return true;
+}
+
+// ==========================================================================
+// Enhanced Scroll Animations for New Page Elements
+// ==========================================================================
+
+// Apply animations to new page elements
+const newAnimatedElements = document.querySelectorAll('.process-step, .job-card, .stat-item, .gallery-item');
+
+newAnimatedElements.forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+    observer.observe(el);
+});
+
+// ==========================================================================
+// Job Card Interactions
+// ==========================================================================
+
+const jobCards = document.querySelectorAll('.job-card');
+
+jobCards.forEach(card => {
+    // Add hover effects
+    card.addEventListener('mouseenter', () => {
+        card.style.transform = 'translateY(-2px)';
+    });
+    
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = 'translateY(0)';
+    });
+    
+    // Handle apply button clicks
+    const applyBtn = card.querySelector('.apply-btn');
+    if (applyBtn) {
+        applyBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            // Get position title
+            const positionTitle = card.querySelector('.job-title').textContent;
+            
+            // Scroll to application form
+            const applicationForm = document.getElementById('contact-form');
+            if (applicationForm) {
+                applicationForm.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+                
+                // Pre-fill position field if it exists
+                const positionSelect = document.getElementById('position');
+                if (positionSelect) {
+                    // Convert title to option value
+                    const optionValue = positionTitle.toLowerCase().replace(/\s+/g, '-');
+                    const option = positionSelect.querySelector(`option[value*="${optionValue.split('-')[0]}"]`);
+                    if (option) {
+                        positionSelect.value = option.value;
+                    }
+                }
+            }
+        });
+    }
+});
+
+// ==========================================================================
+// Gallery Image Interactions
+// ==========================================================================
+
+const galleryItems = document.querySelectorAll('.gallery-item');
+
+galleryItems.forEach(item => {
+    const image = item.querySelector('img');
+    
+    item.addEventListener('mouseenter', () => {
+        if (image) {
+            image.style.transform = 'scale(1.05)';
+        }
+    });
+    
+    item.addEventListener('mouseleave', () => {
+        if (image) {
+            image.style.transform = 'scale(1)';
+        }
+    });
+    
+    // Add click functionality for lightbox (future enhancement)
+    item.addEventListener('click', () => {
+        // Future: Implement lightbox gallery
+        console.log('Gallery item clicked:', image.src);
+    });
+});
+
+// ==========================================================================
+// Process Step Interactions
+// ==========================================================================
+
+const processSteps = document.querySelectorAll('.process-step');
+
+processSteps.forEach((step, index) => {
+    step.addEventListener('mouseenter', () => {
+        step.style.transform = 'translateY(-5px)';
+    });
+    
+    step.addEventListener('mouseleave', () => {
+        step.style.transform = 'translateY(0)';
+    });
+    
+    // Add sequential animation delay
+    step.style.animationDelay = `${index * 0.1}s`;
+});
+
+// ==========================================================================
+// Enhanced Custom Cursor for New Elements
+// ==========================================================================
+
+// Add new elements to cursor hover effects
+const newHoverElements = document.querySelectorAll('.job-card, .gallery-item, .process-step, .apply-btn');
+
+if (window.innerWidth > 1024 && cursor) {
+    newHoverElements.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            cursor.style.transform = 'scale(1.5)';
+            cursor.style.backgroundColor = 'rgba(168, 124, 79, 0.1)';
+        });
+        
+        el.addEventListener('mouseleave', () => {
+            cursor.style.transform = 'scale(1)';
+            cursor.style.backgroundColor = 'transparent';
+        });
+    });
+}
+
+// ==========================================================================
+// Page-Specific Initialization
+// ==========================================================================
+
+// Enhanced initialization for new pages
+document.addEventListener('DOMContentLoaded', () => {
+    // Detect current page type
+    const pageType = detectPageType();
+    
+    // Page-specific initializations
+    switch(pageType) {
+        case 'service-detail':
+            initializeServicePage();
+            break;
+        case 'case-study':
+            initializeCaseStudyPage();
+            break;
+        case 'careers':
+            initializeCareersPage();
+            break;
+        default:
+            // Homepage initialization already handled
+            break;
+    }
+});
+
+// Detect current page type
+function detectPageType() {
+    if (document.querySelector('.service-detail-page')) return 'service-detail';
+    if (document.querySelector('.case-study-page')) return 'case-study';
+    if (document.querySelector('.careers-page')) return 'careers';
+    return 'homepage';
+}
+
+// Service page initialization
+function initializeServicePage() {
+    console.log('Service detail page initialized');
+    
+    // Add any service-specific functionality
+    const ctaButtons = document.querySelectorAll('.service-cta .submit-btn');
+    ctaButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            if (btn.getAttribute('href').startsWith('#')) {
+                e.preventDefault();
+                const target = document.querySelector(btn.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    });
+}
+
+// Case study page initialization
+function initializeCaseStudyPage() {
+    console.log('Case study page initialized');
+    
+    // Initialize stats counter animation
+    const statNumbers = document.querySelectorAll('.stat-number');
+    
+    const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateStatNumber(entry.target);
+                statsObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    statNumbers.forEach(stat => {
+        statsObserver.observe(stat);
+    });
+}
+
+// Careers page initialization
+function initializeCareersPage() {
+    console.log('Careers page initialized');
+    
+    // Smooth scroll for apply buttons
+    const applyButtons = document.querySelectorAll('.apply-btn[href="#contact-form"]');
+    applyButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const target = document.querySelector('#contact-form');
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+}
+
+// Animate stat numbers (for case studies)
+function animateStatNumber(element) {
+    const text = element.textContent;
+    const hasPercent = text.includes('%');
+    const hasPlus = text.includes('+');
+    const number = parseInt(text.replace(/[^\d]/g, ''));
+    
+    if (isNaN(number)) return;
+    
+    let current = 0;
+    const increment = number / 60; // Animate over ~1 second at 60fps
+    
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= number) {
+            current = number;
+            clearInterval(timer);
+        }
+        
+        let displayValue = Math.floor(current).toString();
+        if (hasPercent) displayValue += '%';
+        if (hasPlus) displayValue += '+';
+        
+        element.textContent = displayValue;
+    }, 16);
+}
