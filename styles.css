@@ -408,7 +408,7 @@ p {
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    grid-auto-rows: 300px;
+    grid-auto-rows: 380px;
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -443,7 +443,7 @@ p {
 
 .project-image {
     width: 100%;
-    height: 70%;
+    height: 60%;
     overflow: hidden;
     position: relative;
 }
@@ -460,11 +460,12 @@ p {
 }
 
 .project-info {
-    padding: 1.5rem;
-    height: 30%;
+    padding: 2rem 1.5rem;
+    height: 40%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    overflow: hidden;
 }
 
 .project-title {
@@ -627,6 +628,10 @@ p {
     padding: 2rem;
     transition: all 0.3s ease-in-out;
     border: 1px solid rgba(168, 124, 79, 0.1);
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    cursor: pointer;
 }
 
 .team-member:hover {
@@ -1192,7 +1197,9 @@ p {
     color: #1A1A1A;
 }
 
-/* Careers Page Styles */
+/* ==========================================================================
+   Careers Page Styles
+   ========================================================================== */
 .careers-page {
     padding-top: 120px;
 }
@@ -1371,6 +1378,201 @@ p {
 }
 
 /* ==========================================================================
+   Team Member Detail Pages
+   ========================================================================== */
+
+.team-member-page {
+    padding-top: 120px;
+}
+
+.team-member-hero {
+    background-color: #F8F8F8;
+    padding: 4rem 0;
+}
+
+.team-member-hero .hero-content {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 3rem;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.member-portrait {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.member-portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.member-details h1.member-name {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #1A1A1A;
+    margin-bottom: 0.5rem;
+}
+
+.member-role {
+    font-size: 1.25rem;
+    color: #A87C4F;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.member-tenure {
+    font-size: 1rem;
+    color: #666666;
+    margin-bottom: 2rem;
+}
+
+.member-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #1A1A1A;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #A87C4F;
+}
+
+.contact-link svg {
+    flex-shrink: 0;
+}
+
+.member-biography {
+    padding: 4rem 0;
+}
+
+.biography-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.member-credentials {
+    background-color: #F8F8F8;
+    padding: 4rem 0;
+}
+
+.credentials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.credential-category h3.credential-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1A1A1A;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #A87C4F;
+    padding-bottom: 0.5rem;
+}
+
+.credential-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.credential-item h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1A1A1A;
+    margin-bottom: 0.25rem;
+}
+
+.credential-item p {
+    font-size: 0.875rem;
+    color: #666666;
+    margin-bottom: 0.25rem;
+}
+
+.credential-year {
+    font-size: 0.75rem;
+    color: #A87C4F;
+    font-weight: 500;
+}
+
+.member-expertise {
+    padding: 4rem 0;
+}
+
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.member-projects {
+    background-color: #F8F8F8;
+    padding: 4rem 0;
+}
+
+.team-member-cta {
+    padding: 4rem 0;
+    background-color: #1A1A1A;
+    color: white;
+}
+
+.team-member-cta .section-title {
+    color: white;
+}
+
+.team-member-cta .section-subtitle {
+    color: #CCCCCC;
+}
+
+/* Responsive Design for Team Member Pages */
+@media (max-width: 768px) {
+    .team-member-hero .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .member-portrait {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+    }
+    
+    .member-details h1.member-name {
+        font-size: 2rem;
+    }
+    
+    .credentials-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .expertise-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================================================
    Responsive Design
    ========================================================================== */
 
@@ -1381,7 +1583,7 @@ p {
     
     .portfolio-grid {
         grid-template-columns: 1fr;
-        grid-auto-rows: 350px;
+        grid-auto-rows: 400px;
     }
     
     .project-card--large,
@@ -1635,8 +1837,14 @@ p {
 
 /* Additional project description styles */
 .project-description {
-    font-size: 0.875rem;
-    color: #555555;
-    line-height: 1.5;
-    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: #666666;
+    line-height: 1.4;
+    margin-top: 0.75rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
 }

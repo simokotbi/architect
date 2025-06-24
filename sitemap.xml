@@ -99,4 +99,22 @@
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
     </url>
+    <url>
+        <loc>https://www.archdesignarchitects.com/team/david-chen.html</loc>
+        <lastmod>2025-06-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.archdesignarchitects.com/team/carlos-rodriguez.html</loc>
+        <lastmod>2025-06-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.archdesignarchitects.com/team/michael-thompson.html</loc>
+        <lastmod>2025-06-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
 </urlset>
