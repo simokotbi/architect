@@ -182,7 +182,6 @@ Already implemented, but you can add more:
 <!-- DNS prefetch for external resources -->
 <link rel="dns-prefetch" href="//fonts.googleapis.com">
 <link rel="dns-prefetch" href="//fonts.gstatic.com">
-<link rel="dns-prefetch" href="//images.unsplash.com">
 
 <!-- Preconnect for critical resources -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
