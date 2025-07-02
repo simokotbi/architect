@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARCHDesign Architects Theme Documentation</title>
+    <style>
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: #f8f9fa;
+            color: #222;
+            margin: 0;
+            padding: 0;
+        }
+        .doc-container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+            padding: 40px 32px 48px 32px;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', Arial, sans-serif;
+            color: #1a2536;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5em;
+        }
+        h2 {
+            font-size: 1.6rem;
+            margin-top: 2.2em;
+            margin-bottom: 0.7em;
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 0.2em;
+        }
+        h3 {
+            font-size: 1.2rem;
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+        }
+        p, ul, ol, li, pre, code {
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+        ul, ol {
+            margin-left: 1.5em;
+        }
+        pre {
+            background: #f4f4f4;
+            border-radius: 6px;
+            padding: 1em;
+            overflow-x: auto;
+        }
+        code {
+            background: #f1f1f1;
+            border-radius: 4px;
+            padding: 2px 6px;
+            font-size: 0.98em;
+        }
+        .note {
+            background: #eaf6ff;
+            border-left: 4px solid #2196f3;
+            padding: 12px 18px;
+            margin: 1.5em 0;
+            border-radius: 6px;
+            color: #174a6c;
+        }
+        .toc {
+            background: #f1f3f6;
+            border-radius: 8px;
+            padding: 18px 24px;
+            margin-bottom: 2em;
+        }
+        .toc ul {
+            margin: 0;
+            padding-left: 1.2em;
+        }
+        .toc a {
+            color: #1a2536;
+            text-decoration: none;
+        }
+        .toc a:hover {
+            text-decoration: underline;
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 2em;
+        }
+        .logo h1 {
+            font-size: 2.2rem;
+            color: #1a2536;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+        @media (max-width: 600px) {
+            .doc-container {
+                padding: 18px 4vw 32px 4vw;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            h2 {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="doc-container">
+    <div class="logo">
+        <h1>ARCHDesign Architects Theme</h1>
+        <p style="color:#888; font-size:1.1em;">HTML Template Documentation</p>
+    </div>
+    <div class="toc">
+        <h3>Table of Contents</h3>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#installation">Installation</a></li>
+            <li><a href="#updating">Updating the Theme</a></li>
+            <li><a href="#structure">Folder & File Structure</a></li>
+            <li><a href="#customization">Customization</a>
+                <ul>
+                    <li><a href="#customize-text">Editing Text Content</a></li>
+                    <li><a href="#customize-images">Changing Images</a></li>
+                    <li><a href="#customize-colors">Changing Colors & Styles</a></li>
+                    <li><a href="#customize-navigation">Navigation & Links</a></li>
+                </ul>
+            </li>
+            <li><a href="#faq">FAQ & Troubleshooting</a></li>
+            <li><a href="#support">Support</a></li>
+        </ul>
+    </div>
+
+    <h2 id="introduction">Introduction</h2>
+    <p>Thank you for purchasing <strong>ARCHDesign Architects</strong>! This documentation will guide you through installing, updating, and customizing your theme for your architectural portfolio or business website. All images are included locally, and the template is fully self-contained for easy deployment.</p>
+
+    <h2 id="installation">Installation</h2>
+    <ol>
+        <li><strong>Unzip</strong> the downloaded package from CodeCanyon.</li>
+        <li><strong>Upload</strong> the entire theme folder to your web server or hosting account using FTP, SFTP, or your hosting file manager.</li>
+        <li><strong>Set the root directory</strong> (where <code>index.html</code> is located) as the public web root, or place the files in a subfolder as needed.</li>
+        <li><strong>Access your site</strong> in a browser by navigating to your domain or the subfolder where you uploaded the files.</li>
+    </ol>
+    <div class="note">
+        <strong>Note:</strong> No installation of CMS or database is required. This is a static HTML template.
+    </div>
+
+    <h2 id="updating">Updating the Theme</h2>
+    <ol>
+        <li><strong>Backup</strong> your current theme folder and any files you have customized.</li>
+        <li><strong>Unzip</strong> the new version of the theme.</li>
+        <li><strong>Replace</strong> the old files with the new ones. <br> <em>Tip: Only overwrite files you have not customized, or manually merge your changes if needed.</em></li>
+        <li><strong>Clear your browser cache</strong> and refresh your site to see the updates.</li>
+    </ol>
+
+    <h2 id="structure">Folder & File Structure</h2>
+    <pre><code>index.html
+careers.html
+case-studies/
+    archdesign-gallery.html
+    horizon-tower.html
+    serenity-pavilion.html
+    urban-sanctum.html
+    zenith-residence.html
+images/
+    clients/
+    gallery/
+    hero/
+    office/
+    portfolio/
+    serenity/
+services/
+    architectural-design.html
+    construction-administration.html
+    interior-architecture.html
+    urban-planning.html
+team/
+    carlos-rodriguez.html
+    david-chen.html
+    michael-thompson.html
+styles.css
+script.js
+</code></pre>
+    <p>All images are included locally in the <code>images/</code> folder. HTML files are organized by section for easy editing.</p>
+
+    <h2 id="customization">Customization</h2>
+    <h3 id="customize-text">Editing Text Content</h3>
+    <ol>
+        <li>Open the relevant <code>.html</code> file (e.g., <code>index.html</code>, <code>careers.html</code>, or any file in <code>case-studies/</code>).</li>
+        <li>Locate the text you wish to change. You can use any text editor (VS Code, Sublime Text, Notepad++, etc.).</li>
+        <li>Edit the text between the HTML tags. For example:
+            <pre><code>&lt;h1&gt;ARCHDesign Architects&lt;/h1&gt;
+&lt;p&gt;Crafting spaces that transcend the ordinary&lt;/p&gt;</code></pre>
+        </li>
+        <li>Save the file and refresh your browser to see the changes.</li>
+    </ol>
+
+    <h3 id="customize-images">Changing Images</h3>
+    <ol>
+        <li>All images are stored in the <code>images/</code> folder and its subfolders.</li>
+        <li>To replace an image, overwrite the existing file with your new image (keep the same filename for instant update), or:
+            <ul>
+                <li>Upload your new image to the appropriate subfolder (e.g., <code>images/portfolio/</code>).</li>
+                <li>Update the <code>src</code> or <code>background-image</code> path in the HTML file. Example:
+                    <pre><code>&lt;img src="images/portfolio/my-new-image.jpg" alt="Description"&gt;</code></pre>
+                </li>
+            </ul>
+        </li>
+        <li>For hero/background images, update the <code>style</code> attribute:
+            <pre><code>&lt;div class="hero-image" style="background-image: url('images/hero/my-hero.jpg')"&gt;&lt;/div&gt;</code></pre>
+        </li>
+    </ol>
+
+    <h3 id="customize-colors">Changing Colors & Styles</h3>
+    <ol>
+        <li>Open <code>styles.css</code> in a text editor.</li>
+        <li>Find the CSS variable or selector you want to change (e.g., <code>body</code>, <code>.header</code>, <code>.footer</code>).</li>
+        <li>Edit color codes, font sizes, or other style properties as desired.</li>
+        <li>Save the file and refresh your browser to see the new styles.</li>
+    </ol>
+
+    <h3 id="customize-navigation">Navigation & Links</h3>
+    <ol>
+        <li>Navigation menus are defined in the <code>&lt;nav&gt;</code> sections of <code>index.html</code> and other HTML files.</li>
+        <li>To add, remove, or rename menu items, edit the <code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code> elements inside the navigation.</li>
+        <li>Update the <code>href</code> attributes to point to the correct pages or sections.</li>
+    </ol>
+
+    <h2 id="faq">FAQ & Troubleshooting</h2>
+    <ul>
+        <li><strong>Images not showing?</strong> <br> Ensure the image path is correct and the file exists in the <code>images/</code> folder. Paths are relative to the HTML file's location.</li>
+        <li><strong>Fonts not loading?</strong> <br> The template uses Google Fonts. Ensure you have an internet connection, or self-host fonts if needed.</li>
+        <li><strong>Broken layout?</strong> <br> Check that <code>styles.css</code> is present and linked correctly in your HTML files.</li>
+        <li><strong>JavaScript not working?</strong> <br> Make sure <code>script.js</code> is present and linked at the end of the <code>&lt;body&gt;</code> tag.</li>
+    </ul>
+
+    <h2 id="support">Support</h2>
+    <p>For further assistance, please refer to the <code>README.md</code> file included in your download, or contact the author via your CodeCanyon account for support and updates.</p>
+    <div class="note">
+        <strong>Thank you for choosing ARCHDesign Architects!</strong><br>
+        We hope this template helps you create a stunning online presence for your architectural projects.
+    </div>
+</div>
+</body>
+</html>

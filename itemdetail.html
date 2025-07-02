@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARCHDesign Architects - Premium HTML Template | CodeCanyon</title>
+    <meta name="description" content="Professional architecture and design HTML template featuring modern design, responsive layout, and comprehensive case study pages. Perfect for architects, interior designers, and construction companies.">
+    <meta name="keywords" content="architecture template, design template, HTML template, responsive, architects, interior design, construction, portfolio">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Lora:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* Additional CodeCanyon Item Detail Styles */
+        .item-header {
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .item-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+        
+        .item-subtitle {
+            font-size: 1.4rem;
+            color: #b8860b;
+            margin-bottom: 2rem;
+        }
+        
+        .item-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .stat-badge {
+            background: rgba(184, 134, 11, 0.1);
+            border: 1px solid #b8860b;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #b8860b;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: #cccccc;
+            margin-top: 0.5rem;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .feature-card {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            padding: 2rem;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: #b8860b;
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #b8860b, #daa520);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-description {
+            color: #cccccc;
+            line-height: 1.6;
+        }
+        
+        .demo-section {
+            background: #0f0f0f;
+            padding: 80px 0;
+        }
+        
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .demo-card {
+            background: #1a1a1a;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .demo-card:hover {
+            transform: scale(1.02);
+        }
+        
+        .demo-image {
+            width: 100%;
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .demo-content {
+            padding: 1.5rem;
+        }
+        
+        .demo-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+        
+        .demo-description {
+            color: #cccccc;
+            font-size: 0.9rem;
+        }
+        
+        .tech-specs {
+            background: #1a1a1a;
+            padding: 60px 0;
+        }
+        
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .spec-item {
+            text-align: center;
+        }
+        
+        .spec-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, #b8860b, #daa520);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .spec-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+        
+        .spec-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .spec-list li {
+            color: #cccccc;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .spec-list li:before {
+            content: "✓";
+            color: #b8860b;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        
+        .purchase-section {
+            background: linear-gradient(135deg, #b8860b 0%, #daa520 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .purchase-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+        
+        .purchase-subtitle {
+            font-size: 1.2rem;
+            color: #ffffff;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+        }
+        
+        .purchase-btn {
+            display: inline-block;
+            background: #ffffff;
+            color: #b8860b;
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .purchase-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        }
+        
+        .support-info {
+            background: #0f0f0f;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .support-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .support-item {
+            padding: 2rem;
+        }
+        
+        .support-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #b8860b, #daa520);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .support-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+        
+        .support-description {
+            color: #cccccc;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .item-title {
+                font-size: 2.5rem;
+            }
+            
+            .item-stats {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .features-grid,
+            .demo-grid,
+            .specs-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div class="loader" id="loader">
+        <div class="loader-line"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav-overlay" id="navOverlay">
+        <div class="nav-content">
+            <button class="nav-close" id="navClose">&times;</button>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Live Preview</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#demos" class="nav-link">Demo Pages</a></li>
+                <li><a href="#specs" class="nav-link">Specifications</a></li>
+                <li><a href="#purchase" class="nav-link">Purchase</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <h1 class="logo-text">ARCHDesign</h1>
+            </a>
+        </div>
+        <button class="nav-toggle" id="navToggle">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+    </header>
+
+    <main>
+        <!-- Item Header -->
+        <section class="item-header">
+            <div class="container">
+                <h1 class="item-title">ARCHDesign Architects</h1>
+                <p class="item-subtitle">Premium HTML Template for Architecture & Design Studios</p>
+                <p class="about-paragraph" style="color: #cccccc; max-width: 600px; margin: 0 auto;">
+                    A sophisticated, responsive HTML template designed specifically for architecture firms, interior designers, and construction companies. Features modern design, comprehensive case study pages, and professional presentation.
+                </p>
+                
+                <div class="item-stats">
+                    <div class="stat-badge">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">HTML Pages</span>
+                    </div>
+                    <div class="stat-badge">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Responsive</span>
+                    </div>
+                    <div class="stat-badge">
+                        <span class="stat-number">W3C</span>
+                        <span class="stat-label">Validated</span>
+                    </div>
+                    <div class="stat-badge">
+                        <span class="stat-number">SEO</span>
+                        <span class="stat-label">Optimized</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Features -->
+        <section class="features" id="features">
+            <div class="container">
+                <header class="section-header">
+                    <h2 class="section-title">Template Features</h2>
+                    <p class="section-subtitle">Everything you need for a professional architecture website</p>
+                </header>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L2 7V10C2 16 7 21 12 22C17 21 22 16 22 10V7L12 2Z" stroke="white" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Fully Responsive Design</h3>
+                        <p class="feature-description">Perfect display on all devices - desktop, tablet, and mobile. Mobile-first approach ensures optimal performance across all screen sizes.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" stroke="white" stroke-width="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21" stroke="white" stroke-width="2"/>
+                                <line x1="12" y1="17" x2="12" y2="21" stroke="white" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Modern Architecture Focus</h3>
+                        <p class="feature-description">Specifically designed for architecture firms, interior designers, and construction companies with industry-relevant layouts and components.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="white" stroke-width="2"/>
+                                <polyline points="14,2 14,8 20,8" stroke="white" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Comprehensive Case Studies</h3>
+                        <p class="feature-description">Detailed project case study pages with galleries, client testimonials, and project specifications to showcase your work professionally.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="11" cy="11" r="8" stroke="white" stroke-width="2"/>
+                                <path d="M21 21L16.65 16.65" stroke="white" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">SEO Optimized</h3>
+                        <p class="feature-description">Built with SEO best practices including semantic HTML, meta tags, structured data, and optimized page speed for better search rankings.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <polyline points="22,12 18,12 15,21 9,3 6,12 2,12" stroke="white" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Performance Optimized</h3>
+                        <p class="feature-description">Fast loading times with optimized images, efficient CSS, and minimal JavaScript for excellent user experience and Core Web Vitals scores.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 19C9 19 4 19 4 19C4 19 4 14 4 14" stroke="white" stroke-width="2"/>
+                                <path d="M20 4C20 4 20 9 20 9C20 9 15 9 15 9" stroke="white" stroke-width="2"/>
+                                <line x1="4" y1="19" x2="15" y2="8" stroke="white" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Easy Customization</h3>
+                        <p class="feature-description">Clean, well-organized code with CSS custom properties, modular components, and comprehensive documentation for easy customization.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        }
+        
+        .demo-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(168, 124, 79, 0.95);
+            color: white;
+            padding: 1.5rem 2rem;
+            border-radius: 10px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+        
+        .demo-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .demo-link {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #333;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .demo-link:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            border-color: #A87C4F;
+        }
+        
+        .demo-link h4 {
+            margin: 0 0 0.5rem;
+            color: #A87C4F;
+            font-weight: 600;
+        }
+        
+        .features-section {
+            padding: 80px 0;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #A87C4F, #8B6914);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+        }
+        
+        .feature-icon svg {
+            color: white;
+        }
+        
+        .feature-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        .feature-description {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .specifications-section {
+            padding: 80px 0;
+            background: #F8F8F8;
+        }
+        
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .spec-category {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .spec-category h3 {
+            color: #A87C4F;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        
+        .spec-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .spec-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #EEE;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .spec-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .spec-label {
+            font-weight: 500;
+            color: #333;
+        }
+        
+        .spec-value {
+            color: #666;
+            font-weight: 400;
+        }
+        
+        .files-section {
+            padding: 80px 0;
+        }
+        
+        .files-structure {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 2rem;
+            border-radius: 15px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.8;
+            overflow-x: auto;
+            margin-top: 2rem;
+        }
+        
+        .folder {
+            color: #A87C4F;
+            font-weight: bold;
+        }
+        
+        .file {
+            color: #87CEEB;
+        }
+        
+        .support-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #A87C4F 0%, #8B6914 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .support-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .support-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .support-item h4 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .cta-section {
+            padding: 60px 0;
+            text-align: center;
+            background: white;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #A87C4F, #8B6914);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(168, 124, 79, 0.3);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: #A87C4F;
+            border: 2px solid #A87C4F;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            background: #A87C4F;
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .item-title {
+                font-size: 2.5rem;
+            }
+            
+            .demo-links {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body class="item-detail-page">
+    
+    <!-- Item Hero -->
+    <section class="item-hero">
+        <div class="container">
+            <h1 class="item-title">ARCHDesign</h1>
+            <p class="item-subtitle">Premium Architecture Website Template with 5 Complete Case Studies, Responsive Design, and Professional Quality Code</p>
+            
+            <div class="item-badges">
+                <span class="badge">HTML5 & CSS3</span>
+                <span class="badge">Fully Responsive</span>
+                <span class="badge">5 Case Studies</span>
+                <span class="badge">SEO Optimized</span>
+                <span class="badge">Premium Support</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Demo Section -->
+    <section class="demo-section">
+        <div class="container">
+            <header class="section-header">
+                <h2 class="section-title">Live Preview & Demo Pages</h2>
+                <p class="section-subtitle">Explore all template pages and features</p>
+            </header>
+            
+            <div class="demo-preview">
+                <div class="demo-image">
+                    <div class="demo-overlay">
+                        <h3>Full Template Preview</h3>
+                        <p>See the complete ARCHDesign template in action</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="demo-links">
+                <a href="index.html" class="demo-link" target="_blank">
+                    <h4>Homepage</h4>
+                    <p>Main landing page with hero section, portfolio showcase, and team presentation</p>
+                </a>
+                
+                <a href="case-studies/zenith-residence.html" class="demo-link" target="_blank">
+                    <h4>Case Study - Zenith Residence</h4>
+                    <p>Luxury residential project in Malibu with complete project documentation</p>
+                </a>
+                
+                <a href="case-studies/urban-sanctum.html" class="demo-link" target="_blank">
+                    <h4>Case Study - Urban Sanctum</h4>
+                    <p>Mixed-use development in NYC showcasing commercial architecture</p>
+                </a>
+                
+                <a href="case-studies/horizon-tower.html" class="demo-link" target="_blank">
+                    <h4>Case Study - Horizon Tower</h4>
+                    <p>40-story luxury tower in Miami with hurricane-resistant design</p>
+                </a>
+                
+                <a href="case-studies/serenity-pavilion.html" class="demo-link" target="_blank">
+                    <h4>Case Study - Serenity Pavilion</h4>
+                    <p>Wellness center in Aspen featuring sustainable architecture</p>
+                </a>
+                
+                <a href="case-studies/archdesign-gallery.html" class="demo-link" target="_blank">
+                    <h4>Case Study - ARCHDesign Gallery</h4>
+                    <p>Contemporary art gallery with custom lighting solutions</p>
+                </a>
+                
+                <a href="services/architectural-design.html" class="demo-link" target="_blank">
+                    <h4>Services Pages</h4>
+                    <p>Complete service offerings including design, planning & construction</p>
+                </a>
+                
+                <a href="team/david-chen.html" class="demo-link" target="_blank">
+                    <h4>Team Profiles</h4>
+                    <p>Individual team member pages with portfolios and credentials</p>
+                </a>
+                
+                <a href="careers.html" class="demo-link" target="_blank">
+                    <h4>Careers Page</h4>
+                    <p>Job listings and company culture showcase</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="features-section">
+        <div class="container">
+            <header class="section-header">
+                <h2 class="section-title">Key Features</h2>
+                <p class="section-subtitle">Everything you need for a professional architecture website</p>
+            </header>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L13.09 6.26L17 4L14.74 8.09L19 9L14.74 9.91L17 14L13.09 11.74L12 16L10.91 11.74L7 14L9.26 9.91L5 9L9.26 8.09L7 4L10.91 6.26L12 2Z" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">5 Complete Case Studies</h3>
+                    <p class="feature-description">Fully detailed project pages with galleries, testimonials, and comprehensive project information</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 2V8H3L12 22L21 8H14V2H10Z" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Fully Responsive</h3>
+                    <p class="feature-description">Perfect display on all devices - desktop, tablet, and mobile with optimized user experience</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 21V19H5V12C5 8.13 8.13 5 12 5S19 8.13 19 12V19H21V21H3Z" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">SEO Optimized</h3>
+                    <p class="feature-description">Built with SEO best practices, schema markup, and performance optimization for better search rankings</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M8 14s1.5 2 4 2 4-2 4-2" stroke="currentColor" stroke-width="1.5"/>
+                            <line x1="9" y1="9" x2="9.01" y2="9" stroke="currentColor" stroke-width="1.5"/>
+                            <line x1="15" y1="9" x2="15.01" y2="9" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Professional Design</h3>
+                    <p class="feature-description">Modern, elegant design specifically crafted for architecture firms and design studios</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM19 19H5V5H19V19Z" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Clean Code</h3>
+                    <p class="feature-description">Well-structured, commented HTML5 and CSS3 code that's easy to customize and maintain</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Fast Loading</h3>
+                    <p class="feature-description">Optimized images and code for lightning-fast load times and excellent Core Web Vitals scores</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Specifications -->
+    <section class="specifications-section">
+        <div class="container">
+            <header class="section-header">
+                <h2 class="section-title">Technical Specifications</h2>
+                <p class="section-subtitle">Complete technical details and requirements</p>
+            </header>
+            
+            <div class="specs-grid">
+                <div class="spec-category">
+                    <h3>Template Details</h3>
+                    <ul class="spec-list">
+                        <li>
+                            <span class="spec-label">Template Type</span>
+                            <span class="spec-value">HTML Template</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">Category</span>
+                            <span class="spec-value">Architecture & Construction</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">Total Pages</span>
+                            <span class="spec-value">15+ Pages</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">File Size</span>
+                            <span class="spec-value">~8MB (Including Images)</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">Browser Support</span>
+                            <span class="spec-value">All Modern Browsers</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="spec-category">
+                    <h3>Technology Stack</h3>
+                    <ul class="spec-list">
+                        <li>
+                            <span class="spec-label">HTML Version</span>
+                            <span class="spec-value">HTML5</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">CSS Version</span>
+                            <span class="spec-value">CSS3</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">JavaScript</span>
+                            <span class="spec-value">Vanilla JS (No Dependencies)</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">Framework</span>
+                            <span class="spec-value">None (Pure HTML/CSS/JS)</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">Fonts</span>
+                            <span class="spec-value">Google Fonts (Montserrat, Lora)</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="spec-category">
+                    <h3>Features Included</h3>
+                    <ul class="spec-list">
+                        <li>
+                            <span class="spec-label">Responsive Design</span>
+                            <span class="spec-value">✓ Included</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">Cross-browser Compatible</span>
+                            <span class="spec-value">✓ Included</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">SEO Optimized</span>
+                            <span class="spec-value">✓ Included</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">Performance Optimized</span>
+                            <span class="spec-value">✓ Included</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">Documentation</span>
+                            <span class="spec-value">✓ Comprehensive</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="spec-category">
+                    <h3>Page Structure</h3>
+                    <ul class="spec-list">
+                        <li>
+                            <span class="spec-label">Homepage</span>
+                            <span class="spec-value">✓ Complete</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">Case Studies</span>
+                            <span class="spec-value">5 Detailed Pages</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">Service Pages</span>
+                            <span class="spec-value">4 Service Pages</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">Team Profiles</span>
+                            <span class="spec-value">3 Team Members</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">Additional Pages</span>
+                            <span class="spec-value">Careers, About</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- File Structure -->
+    <section class="files-section">
+        <div class="container">
+            <header class="section-header">
+                <h2 class="section-title">File Structure</h2>
+                <p class="section-subtitle">Well-organized files for easy customization</p>
+            </header>
+            
+            <div class="files-structure">
+<span class="folder">archdesign-template/</span>
+├── <span class="file">index.html</span>                     # Homepage
+├── <span class="file">careers.html</span>                   # Careers page
+├── <span class="file">styles.css</span>                     # Main stylesheet
+├── <span class="file">script.js</span>                      # JavaScript functionality
+├── <span class="file">manifest.json</span>                  # PWA manifest
+├── <span class="file">robots.txt</span>                     # SEO robots file
+├── <span class="file">sitemap.xml</span>                    # XML sitemap
+├── <span class="folder">case-studies/</span>
+│   ├── <span class="file">zenith-residence.html</span>      # Luxury residential project
+│   ├── <span class="file">urban-sanctum.html</span>         # Mixed-use development
+│   ├── <span class="file">horizon-tower.html</span>         # High-rise tower project
+│   ├── <span class="file">serenity-pavilion.html</span>     # Wellness center project
+│   └── <span class="file">archdesign-gallery.html</span>    # Gallery project
+├── <span class="folder">services/</span>
+│   ├── <span class="file">architectural-design.html</span>   # Design services
+│   ├── <span class="file">interior-architecture.html</span> # Interior services
+│   ├── <span class="file">urban-planning.html</span>        # Planning services
+│   └── <span class="file">construction-administration.html</span>
+├── <span class="folder">team/</span>
+│   ├── <span class="file">david-chen.html</span>            # Principal Architect
+│   ├── <span class="file">carlos-rodriguez.html</span>      # Senior Designer
+│   └── <span class="file">michael-thompson.html</span>      # Project Manager
+├── <span class="folder">images/</span>
+│   ├── <span class="folder">hero/</span>                    # Hero section images
+│   ├── <span class="folder">portfolio/</span>               # Project portfolio images
+│   ├── <span class="folder">team/</span>                    # Team member photos
+│   ├── <span class="folder">clients/</span>                 # Client testimonial photos
+│   ├── <span class="folder">office/</span>                  # Office workspace images
+│   ├── <span class="folder">gallery/</span>                 # Gallery project images
+│   └── <span class="folder">serenity/</span>                # Serenity project images
+└── <span class="folder">documentation/</span>
+    ├── <span class="file">README.md</span>                  # Getting started guide
+    ├── <span class="file">INSTALLATION_GUIDE.md</span>      # Installation instructions
+    ├── <span class="file">CUSTOMIZATION_GUIDE.md</span>     # Customization guide
+    ├── <span class="file">SEO_SETUP_GUIDE.md</span>         # SEO optimization guide
+    ├── <span class="file">PERFORMANCE_GUIDE.md</span>       # Performance optimization
+    └── <span class="file">LICENSE.md</span>                 # License information
+            </div>
+        </div>
+    </section>
+
+    <!-- Support & Documentation -->
+    <section class="support-section">
+        <div class="container">
+            <header class="section-header">
+                <h2 class="section-title">Support & Documentation</h2>
+                <p class="section-subtitle">Everything you need to get started and succeed</p>
+            </header>
+            
+            <div class="support-features">
+                <div class="support-item">
+                    <h4>📚 Comprehensive Documentation</h4>
+                    <p>Step-by-step guides for installation, customization, SEO setup, and performance optimization</p>
+                </div>
+                
+                <div class="support-item">
+                    <h4>🚀 Quick Start Guide</h4>
+                    <p>Get your site up and running in minutes with our detailed quick start instructions</p>
+                </div>
+                
+                <div class="support-item">
+                    <h4>🎨 Customization Guide</h4>
+                    <p>Learn how to customize colors, fonts, content, and layouts to match your brand</p>
+                </div>
+                
+                <div class="support-item">
+                    <h4>🔧 Premium Support</h4>
+                    <p>Expert support for any questions or issues you might encounter during setup</p>
+                </div>
+                
+                <div class="support-item">
+                    <h4>🔄 Free Updates</h4>
+                    <p>Receive template updates and improvements for continued compatibility and features</p>
+                </div>
+                
+                <div class="support-item">
+                    <h4>🎯 SEO Guidance</h4>
+                    <p>Complete SEO setup guide to help your architecture firm rank higher in search results</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <header class="section-header">
+                <h2 class="section-title">Ready to Build Your Professional Architecture Website?</h2>
+                <p class="section-subtitle">Join hundreds of satisfied customers who have chosen ARCHDesign template</p>
+            </header>
+            
+            <div class="cta-buttons">
+                <a href="#" class="btn-primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 15V19C21 20.1 20.1 21 19 21H5C3.9 21 3 20.1 3 19V15" stroke="currentColor" stroke-width="1.5"/>
+                        <polyline points="7,10 12,15 17,10" stroke="currentColor" stroke-width="1.5"/>
+                        <line x1="12" y1="15" x2="12" y2="3" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                    Purchase & Download
+                </a>
+                
+                <a href="index.html" class="btn-secondary" target="_blank">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+                        <polygon points="10,8 16,12 10,16 10,8" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                    View Live Demo
+                </a>
+            </div>
+            
+            <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #EEE;">
+                <p style="color: #666; font-size: 0.9rem;">
+                    ⭐ 30-day money-back guarantee &nbsp;|&nbsp; 
+                    🔒 Secure payment &nbsp;|&nbsp; 
+                    📧 Instant download &nbsp;|&nbsp; 
+                    🆘 Premium support included
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" style="background: #1a1a1a; color: white; padding: 40px 0; text-align: center;">
+        <div class="container">
+            <div style="margin-bottom: 2rem;">
+                <h3 style="color: #A87C4F; margin-bottom: 1rem;">ARCHDesign Template</h3>
+                <p style="color: #ccc; max-width: 600px; margin: 0 auto;">
+                    Professional architecture website template crafted with attention to detail and modern web standards.
+                    Perfect for architectural firms, design studios, and construction companies.
+                </p>
+            </div>
+            
+            <div style="border-top: 1px solid #333; padding-top: 2rem;">
+                <p style="color: #666; margin: 0;">
+                    &copy; 2025 ARCHDesign Template. All rights reserved. | 
+                    <a href="#" style="color: #A87C4F;">License</a> | 
+                    <a href="#" style="color: #A87C4F;">Support</a> | 
+                    <a href="#" style="color: #A87C4F;">Documentation</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add loading animation for demo links
+        document.querySelectorAll('.demo-link').forEach(link => {
+            link.addEventListener('click', function() {
+                this.style.opacity = '0.7';
+                setTimeout(() => {
+                    this.style.opacity = '1';
+                }, 1000);
+            });
+        });
+
+        // Add scroll reveal animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.feature-card, .spec-category, .demo-link').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
